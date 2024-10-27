@@ -1,0 +1,92 @@
+/* General Styles */
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Note Card Styles */
+.notes-list .note {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.notes-list .note h3 {
+  margin: 0;
+}
+
+.notes-list .note button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+/* Responsive Layout Adjustments */
+@media (min-width: 600px) {
+  .App {
+    padding: 40px;
+  }
+
+  /* For medium screens and above, display notes in a grid */
+  .notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  button {
+    width: auto;
+  }
+
+  /* Allow title and description input fields to sit side-by-side */
+  .note-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .note-form input,
+  .note-form textarea {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .App {
+    max-width: 900px;
+    padding: 40px 20px;
+  }
+}
